@@ -353,7 +353,7 @@ body footer {
     font-size: 19vw;
   }
   body header .T-bottom {
-    padding: 5px;
+    margin: 5px 0 0 0;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -366,10 +366,6 @@ body footer {
   }
   body header #H-middle p span {
     font-size: 1.4em;
-  }
-  body header .T-bottom {
-    margin: 5px 0 0 0;
-    padding: 0;
   }
   body header .T-bottom #linksbutton {
     font-size: 1.4em;
