@@ -381,3 +381,44 @@ body {
 	}
 }
 
+@media only screen and (max-width: 400px) {
+	body {
+		header {
+		#H-left {
+			a {
+				font-size: 1.3em;
+				margin: 5px 0 0 0;
+			}
+		}
+		#H-middle {
+		p {
+			font-size: 1.3em;
+		span {
+			font-size: 1.4em;
+		}
+		}
+		
+	}
+	.T-bottom {
+		margin: 5px 0 0 0;
+		padding: 0;
+		#linksbutton {
+			font-size: 1.4em;
+		}
+	}
+}
+section article {
+	margin: 0 0 40px 0;
+	.description {
+	font-size: 1.2em;
+}
+h2 {
+	font-size: 1.8em;
+}
+}
+}
+#scroll {
+	width: 40px;
+	height: 40px;
+}
+}

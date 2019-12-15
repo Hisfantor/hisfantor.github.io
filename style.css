@@ -356,5 +356,38 @@ body footer {
     padding: 5px;
   }
 }
+@media only screen and (max-width: 400px) {
+  body header #H-left a {
+    font-size: 1.3em;
+    margin: 5px 0 0 0;
+  }
+  body header #H-middle p {
+    font-size: 1.3em;
+  }
+  body header #H-middle p span {
+    font-size: 1.4em;
+  }
+  body header .T-bottom {
+    margin: 5px 0 0 0;
+    padding: 0;
+  }
+  body header .T-bottom #linksbutton {
+    font-size: 1.4em;
+  }
+  body section article {
+    margin: 0 0 40px 0;
+  }
+  body section article .description {
+    font-size: 1.2em;
+  }
+  body section article h2 {
+    font-size: 1.8em;
+  }
+
+  #scroll {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
