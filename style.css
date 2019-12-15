@@ -1,24 +1,360 @@
-div {
-	margin:auto;
-	margin-top:200px;
-	width:600px;
-	box-shadow: 0 2px 2px rgba(136,153,166,0.3);
-	height:350px;
-	border:solid grey 2px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-span {
-	width:100%;
-	display:inline-block;
-	text-align:center;
-	font-family:Helvetica;
-	font-size:80px;
-	line-height:350px;
-	color:rgba(196, 90, 44, 0.8);
-	text-decoration: underline;
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
 }
-ul {
-	list-style:none;
-	padding:0;
-	line-height:18px;
+
+body {
+  font-family: "Roboto", sans-serif;
 }
+body a {
+  color: #f1fa8c;
+  text-decoration: none;
+}
+body main {
+  max-height: 100%;
+  overflow-x: hidden;
+  perspective: 1px;
+  perspective-origin: center top;
+}
+body header {
+  background-color: #282a36;
+  height: 100vh;
+  width: 100%;
+  transform-origin: center top;
+  transform: translateZ(-1px) scale(2.00895);
+}
+body header div {
+  background-color: #6272a4;
+  color: #cccccc;
+  position: absolute;
+  padding: 2px;
+}
+body header div a {
+  color: #f1fa8c;
+}
+body header #H-left, body header #H-right, body header .T-bottom {
+  width: 250px;
+  height: 100vh;
+}
+body header #H-middle, body header #T-top {
+  height: 250px;
+  width: 60%;
+}
+body header #H-left {
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+body header #H-left img {
+  max-height: 200px;
+  margin: 25px 0 25px 30px;
+}
+body header #H-left a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 1.6em;
+}
+body header #H-right {
+  left: 30%;
+  top: 0;
+}
+body header #H-right p {
+  position: absolute;
+  font-size: 1.2em;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+body header .T-bottom {
+  left: 69%;
+  top: 0;
+}
+body header .T-bottom #linksbutton {
+  display: none;
+}
+body header .T-bottom .links {
+  position: absolute;
+  bottom: 20px;
+}
+body header .T-bottom .links img {
+  width: calc((100% - 36px) / 4);
+  border: solid black 3px;
+  border-radius: 5px;
+  margin: 0 3px 0 3px;
+  padding: 3px;
+}
+body header .T-bottom .links img:hover {
+  background-color: #f1fa8c;
+  padding: 1px;
+}
+body header #H-middle {
+  top: 400px;
+  left: 0;
+  z-index: 4;
+}
+body header #H-middle p {
+  margin-left: 250px;
+  font-size: 1.6em;
+}
+body header #H-middle p span {
+  font-size: 1.8em;
+  color: #ffb86c;
+}
+body header #T-top {
+  z-index: 5;
+  top: 0;
+  left: 30%;
+  width: 70%;
+}
+body header #T-top h1 {
+  font-family: "PT Serif Caption", serif;
+  margin: 0;
+  line-height: 250px;
+  font-size: 13vw;
+  color: #ffb86c;
+}
+body section {
+  min-height: 200vh;
+  background: #44475a;
+  transform: translateZ(0);
+}
+body section article {
+  margin: 0 0 80px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #44475a;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "title title" "text pictures";
+}
+body section article:last-child {
+  margin: 0;
+}
+body section article h2 {
+  grid-area: title;
+  color: #ffb86c;
+  font-size: 3em;
+}
+body section article .description {
+  color: #cccccc;
+  grid-area: text;
+  font-size: 1.5em;
+  display: inline-block;
+}
+body section article .description h3 {
+  margin: 10px 0 0 0;
+}
+body section article div.gallery {
+  grid-area: pictures;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-row-end: span 2;
+}
+body section article div.gallery img {
+  max-width: 100%;
+  float: none;
+  height: auto;
+}
+body section article div.gallery iframe {
+  grid-column-end: span 2;
+  width: 100%;
+  height: 100%;
+}
+body section article #listgallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body section article #listgallery h3 {
+  margin: 20px 0 0 0;
+  grid-row: 1;
+}
+body section article #listgallery h3:nth-child(7), body section article #listgallery h3:nth-child(5) {
+  grid-row: 3;
+}
+body section article #listgallery ul {
+  list-style: none;
+}
+body section #studentcooking div.gallery {
+  grid-template-columns: fit-content(50%) fit-content(50%) fit-content(50%);
+}
+body section #studentcooking div.gallery img {
+  max-height: 250px;
+}
+body footer {
+  background-color: #282a36;
+  color: #cccccc;
+  text-align: center;
+}
+
+#scroll {
+  position: fixed;
+  right: 16px;
+  bottom: 5px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #ffb86c;
+  text-indent: -9999px;
+  display: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 5px;
+}
+
+#scroll span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -12px;
+  height: 0;
+  width: 0;
+  border: 8px solid transparent;
+  border-bottom-color: #ffffff;
+}
+
+@media only screen and (max-width: 1600px) {
+  body header #H-middle p {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 1330px) {
+  body section article {
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "text" "pictures";
+  }
+  body section article div.gallery {
+    grid-template-columns: 1fr;
+  }
+  body section article#lists iframe {
+    height: 500px;
+  }
+  body section article h2 {
+    font-size: 2.2em;
+  }
+  body section article .description {
+    font-size: 1.4em;
+  }
+
+  body section #studentcooking div.gallery {
+    grid-template-columns: 1fr;
+  }
+  body section #studentcooking div.gallery img {
+    max-height: none;
+  }
+
+  body header #H-left, body header #H-middle, body header #T-top, body header .T-bottom {
+    padding: 0 100px 0 100px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+  body header #H-left {
+    text-align: center;
+  }
+  body header #H-left img {
+    display: none;
+  }
+  body header #H-left a {
+    margin: 5px 10px 0 0;
+    padding: 1px 5px 1px 5px;
+    width: auto;
+  }
+  body header .T-bottom {
+    margin: 40px 0 0 0;
+    padding: 5px 0;
+    text-align: center;
+  }
+  body header .T-bottom #linksbutton {
+    display: inline-block;
+    border: 1px solid #f1fa8c;
+    padding: 1px 5px 1px 5px;
+    background-color: #6272a4;
+    color: #f1fa8c;
+    font-size: 2em;
+  }
+  body header .T-bottom .links {
+    display: none;
+  }
+  body header .T-bottom .linkspage {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    padding: 80px 5px 0 5px;
+  }
+  body header .linkspage {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8;
+  }
+  body header .linkspage #linksbutton {
+    position: absolute;
+    top: 5px;
+    width: calc(100% - 10px);
+    left: 0;
+    margin: 0 5px 0 5px;
+    z-index: 10;
+  }
+  body header .linkspage #linksbutton:before {
+    content: "close ";
+  }
+  body header #H-middle {
+    top: auto;
+  }
+  body header #H-middle p {
+    margin: 0;
+    padding: 0 5px 0 5px;
+  }
+  body header #H-right {
+    top: auto;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+  }
+  body header #H-right p {
+    position: relative;
+    padding: 0 0 5px 0;
+    bottom: auto;
+    width: 100%;
+  }
+  body header #T-top h1 {
+    text-align: center;
+    line-height: normal;
+    font-size: 14vw;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 850px) {
+  body header #H-left, body header #H-middle, body header #T-top, body header .T-bottom {
+    padding: 0 5px;
+  }
+  body header #T-top h1 {
+    font-size: 19vw;
+  }
+  body header .T-bottom {
+    padding: 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
