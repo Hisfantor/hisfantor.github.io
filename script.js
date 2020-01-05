@@ -16,5 +16,11 @@ $(document).ready(function(){
         $(".links").toggleClass("linkspage");
         $(".T-bottom").toggleClass("linkspage");
     })
+});
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
 
+    $('main').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
 });
