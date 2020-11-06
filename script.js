@@ -17,6 +17,7 @@ $(document).ready(function(){
         $(".T-bottom").toggleClass("linkspage");
     })
 });
+
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
 

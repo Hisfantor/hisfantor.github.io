@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+
+	<script type="text/javascript" src="http://livejs.com/live.js"></script>
+
 	<meta charset="utf-8">
 	<meta name="p:domain_verify" content="d29788a4ca9610493c561297c0ae83b6"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,31 +39,23 @@
 	<main>
 		<header>
 			<div id="T-top">
-				<h1>Hisfantor</h1>
+				
 			</div>
 			<div id="H-middle">
-				<p>
-					<span>About:</span> I'm Niclas from Germany. 20 years old studying mechanical engineering and trying to create in my
-					free time. Here you'll find an overview of my projects past and present. It's all over the place 
-					in terms of interests and subjects. Things I'm interested in include: tech, engineering, cooking, movies, 
-					video games, mechanical keyboards, cars, furniture, Linux and much more
-				</p>
+				
 			</div>
 			<div id="H-left">
-				<img src="img/logo.png" alt="the Hisfantor Logo">
+				<!--img src="img/logo.png" alt="the Hisfantor Logo">
 				<nav>
 
-					<a href="#studentcooking">studentcooking</a>
-					<a href="#blog">blog</a>
-					<a href="#lowercase_games">lowercase_games</a>
-					<a href="#lists">tables & lists</a>
-					<a href="#mk">meckanical keyboards</a>
-					<!--a href="#reddit">reddit</a-->
-				</nav>
+					<a href="https://hisfantor.com/studentcooking/">studentcooking</a>
+					<a href="https://hisfantor.com/blog/">blog</a>
+					<a href="https://lowercase-games.itch.io/">lowercase_games</a>
+				</nav-->
 			</div>
 			<div class="T-bottom">
 				<a id="linksbutton">Social Media / Links</a>
-				<div class="links">
+				<!--div class="links">
 					<a href="https://twitter.com/Hisfantor" title="twitter"><img src="icons/twitter.png" alt="twitter icon"></a>
 					<a href="https://www.reddit.com/user/Hisfantor/" title="reddit"><img src="icons/reddit.png" alt="reddit icon"></a>
 					<a href="https://www.youtube.com/channel/UCiAWzIGCRPy-RWoG-MN3Eug" title="youtube"><img src="icons/youtube.png" alt="youtube icon"></a>
@@ -74,19 +69,26 @@
 					<a href="https://www.rottentomatoes.com/user/id/976681227" title="rottentomatoes"><img src="icons/tomato.png" alt="rottentomatoes icon"></a>
 					<a href="https://www.flickr.com/photos/hisfantor/" title="flickr"><img src="icons/flickr.png" alt="flickr icon"></a>
 					<br>Discord: Hisfantor#1945
-				</div>
+				</div-->
 			</div>
 			<div id="H-right">
-				<p>
-					&#8681; scroll down for more &#8681;
-				</p>
+				
 			</div>
+
+			<h1>Hisfantor</h1>
+			<p>
+				 I'm Niclas from Germany.  mechanical engineering major. <br>
+				 Here you'll find an overview of my hobby projects. <br>
+				 Things I'm interested in include: cars | cooking | engineering | furniture | linux | mk | movies | tech
+				 and much more...
+				</p>
 		</header>
 		<section>
 			<article id="studentcooking">
-				<h2>Studentcooking</h2>
+				<h2 after="2018-2019">Studentcooking</h2>
 
 				<div class="description">
+					Hugo
 					Since I'm really into cooking I wanted to share my passion. As a student, I don't have a big kitchen, all
 					the tools or a big budget. So my plan is to share that it's possible anyway, to cook a wide variety 
 					of simple and healthy meals for yourself. It's not even as hard as many might think.
@@ -95,14 +97,47 @@
 					, where you can find some of the "recipees" I have cooked. I keep the instructions as minimal as possible since I believe that you learn the most by trying yourself.
 				</div>
 				<div class="gallery">
-					<a href="/studentcooking" title="my studentcooking blog"><img src="img/studentcooking/wide1.WebP" alt="stundetcooking website screenshot"></a>
-					<a href="/studentcooking" title="my studentcooking blog"><img src="img/studentcooking/mobile.WebP" alt="student cooking mobile website screenshot"></a>
-					<a href="https://www.instagram.com/hft_studentcooking" title="hft_studentcooking instagram"><img src="img/studentcooking/insta.WebP" alt="studentcooking instagram screenshot"></a>
+				<div class="slideshow-container">
+
+	<div class="mySlides fade">
+		<div class="numbertext">1 / 3</div>
+		<img src="https://hisfantor.com/img/studentcooking/wide1.WebP">
+		<div class="text">Caption Text</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">2 / 3</div>
+		<img src="https://hisfantor.com/img/studentcooking/mobile.WebP">
+		<div class="text">Caption Two</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">3 / 3</div>
+		<img src="https://hisfantor.com/img/studentcooking/insta.WebP">
+		<div class="text">Caption Three</div>
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+</div>	
+</div>
+					
 				</div>
 			</article>
+
+					
+					
 			<article id="blog">
-			<h2>Blog</h2>
+			<h2>Blog</h2><span>2018-day</span>
 			<div class="description">
+				Jekyll
 				Another playground for my web design hobby is <a href="http://hisfantor.com/blog/" title="hisfantor.com/blog">my blog</a>, where I try new stuff and test ideas. It is the same
 				as studentcooking a static site generator, but this time run by jekyll. But other than the web design aspect I try to collect 
 				useful information there. I wrote some guides or just general write-ups of things that I have worked on regarding Linus, Keyboards
@@ -115,9 +150,9 @@
 			</div>
 		</article>
 			<article id="lowercase_games">
-				<h2>lowercase_games</h2>
+				<h2>lowercase_games</h2> <span>2016-2018</span>
 				<div class="description">
-					Between 2016 and 2018 I worked on a couple of games with the lowercase_games team which I co-created. 
+					lowercase_games team which I co-created. 
 					I was responsible for game design, Linux versions and organisation within the team and our social media channels.
 					We made all our games for game jams, which was a great experience since we had a given theme for the game and a limited time (which was 72h for the last 3 games).
 					<h3><a href="https://lowercase-games.itch.io/metamorph" title="Metamorph game page/download">Metamorph:</a></h3>
@@ -137,12 +172,61 @@
 					achieve a variety of different endings.
 				</div>
 				<div class="gallery">
-					<a href="https://lowercase-games.itch.io/rose-coloured-dungeon-life" title="rose-coloured-dungeon-life game page/download"><img src="img/lowercase_games/rcdl.gif" alt="Rose-Coloured Dungeon Life game screenshot"></a>
-					<a href="https://lowercase-games.itch.io/dipsomaniac" title="dipsomaniac game page/download"><img src="img/lowercase_games/dipso.WebP" alt="Dipsomaniac game screenshot"></a>
-					<a href="https://www.designbyhumans.com/shop/Hisfantor/" title="lowercase games merch store"><img src="img/lowercase_games/merch.WebP" alt="designbyhumans lowercase games merch store screenshot"></a>
-					<a href="https://lowercase-games.itch.io/im-no-shut-in" title="im-no-shut-in game page/download"><img src="img/lowercase_games/imno.WebP" alt="I'm no shut-in game screenshot"></a>
-					<a href="https://twitter.com/lowercase_games" title="lowercase games twitter"><img src="img/lowercase_games/twitter.WebP" alt="lowercase games twitter screenshot"></a>
-					<a href="https://lowercase-games.itch.io/metamorph" title="Metamorph game page/download"><img src="img/lowercase_games/meta.WebP" alt="Metamorph game screenshot"></a>
+					<div class="slideshow-container">
+
+	<div class="mySlides fade">
+		<div class="numbertext">1 / 3</div>
+		<img src="img/lowercase_games/rcdl.gif" alt="Rose-Coloured Dungeon Life game screenshot">
+		<div class="text">Caption Text</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">2 / 3</div>
+		<img src="img/lowercase_games/dipso.WebP" alt="Dipsomaniac game screenshot">
+		<div class="text">Caption Two</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">3 / 3</div>
+		<img src="img/lowercase_games/merch.WebP" alt="designbyhumans lowercase games merch store screenshot">
+		<div class="text">Caption Three</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext">4 / 3</div>
+		<img src="img/lowercase_games/imno.WebP" alt="I'm no shut-in game screenshot">
+		<div class="text">Captionhgfdasdfghijokplhlgwqraerdtygu Three</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext">4 / 3</div>
+		<img src="img/lowercase_games/twitter.WebP" alt="lowercase games twitter screenshot">
+		<div class="text">Captionhgfdasdfghijokplhlgwqraerdtygu Three</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext">4 / 3</div>
+		<img src="img/lowercase_games/meta.WebP" alt="Metamorph game screenshot">
+		<div class="text">Captionhgfdasdfghijokplhlgwqraerdtygu Three</div>
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+	<span class="dot" onclick="currentSlide(4)"></span>
+	<span class="dot" onclick="currentSlide(5)"></span>
+	<span class="dot" onclick="currentSlide(6)"></span>
+</div>	
+</div>
+					<a href="https://lowercase-games.itch.io/rose-coloured-dungeon-life" title="rose-coloured-dungeon-life game page/download"></a>
+					<a href="https://lowercase-games.itch.io/dipsomaniac" title="dipsomaniac game page/download"></a>
+					<a href="https://www.designbyhumans.com/shop/Hisfantor/" title="lowercase games merch store"></a>
+					<a href="https://lowercase-games.itch.io/im-no-shut-in" title="im-no-shut-in game page/download"></a>
+					<a href="https://twitter.com/lowercase_games" title="lowercase games twitter"></a>
+					<a href="https://lowercase-games.itch.io/metamorph" title="Metamorph game page/download"></a>
 				</div>
 			</article>
 			<article id="lists">
@@ -203,7 +287,7 @@
 				</div>
 			</article>
 			<article id="mk">
-				<h2>Mechanical Keyboards</h2>
+				<h2>Mechanical Keyboards</h2><span>2017-day</span>
 				<div class="description">
 				On the 24.8.2016 started my journey down the rabbit hole which is r/MechanicalKeyboard.
 				I posted a layout idea of an 40% layout with additional numpad. If you follow <a href="https://old.reddit.com/r/MechanicalKeyboards/comments/4zdnpk/an_idea_of_a_40_board_with_numpad/" title="reddit post about my first keyboard design">this comment thread</a>
